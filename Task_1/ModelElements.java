@@ -33,4 +33,16 @@ public class ModelElements {
 
         }
     }
+
+    class Camera {
+        public Point3D location;
+        public Angle3D angle;
+
+        public void Rotate(Angle3D a) {
+
+        }
+        public void Move(Point3D p) {
+
+        }
+    }
 }
