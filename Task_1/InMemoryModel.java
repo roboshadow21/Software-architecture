@@ -7,13 +7,14 @@ import Homework.Task_1.ModelElements.Camera;
 
 public class InMemoryModel {
 
-    public class ModelStore implements IModelChanger {
+    public class ModelStore implements IModelChanger, IModelChangedObserver {
         public PoligonalModel models;
         public Scene scenes;
         public Flash flashes;
         public Camera cameras;
+        private IModelChangedObserver changeObservers;
 
-        public Scene getScene(int p) {
+        public Scene getScena(int p) {
             Scene scenOne = new Scene();
             return scenOne;
 
