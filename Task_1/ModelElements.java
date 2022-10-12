@@ -4,7 +4,7 @@ public class ModelElements {
 
     class Scene {
         public int id;
-        public PoligonModel models;
+        public PoligonalModel models;
         public Flash flashes;
 
         public Type method1(Type t) {
@@ -44,5 +44,12 @@ public class ModelElements {
         public void Move(Point3D p) {
 
         }
+    }
+    class Texture {
+
+    }
+    class Poligon {
+
+        public Point3D points;
     }
 }
