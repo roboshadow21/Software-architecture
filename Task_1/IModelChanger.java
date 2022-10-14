@@ -1,7 +1,10 @@
 package Homework.Task_1;
 
+/**
+ * Интерфейс изменения модели
+ */
 public interface IModelChanger {
-    default void NotifyChange(IModelChanger sender) {
+    public void NotifyChange(IModelChanger sender) {
 
     }
 }
