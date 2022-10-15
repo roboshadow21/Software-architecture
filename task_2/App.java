@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * Класс, запускающий исполнение программы
+ */
 public class App {
 
     public static void main(String[] args) {
