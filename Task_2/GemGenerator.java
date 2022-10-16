@@ -1,4 +1,4 @@
-package Homework.task_2;
+package Homework.Task_2;
 
 public class GemGenerator extends ItemGenerator{
 

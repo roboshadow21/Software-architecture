@@ -1,8 +1,7 @@
-package Homework.task_2;
+package Homework.Task_2;
 
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Класс, запускающий исполнение программы
