@@ -15,7 +15,10 @@ public class App {
         ArrayList<ItemGenerator> generatorList = new ArrayList<>();
         generatorList.add(new GoldGenerator());
         generatorList.add(new GemGenerator());
-        generatorList.add(new WeaponGenerator());
+        generatorList.add(new SwordGenerator());
+        generatorList.add(new ArmorGenerator());
+        generatorList.add(new ManaGenerator());
+        generatorList.add(new HealthGenerator());
         for (int i = 0; i<10; i++) {
             int idx = Math.abs(random.nextInt() % 2)==0?0:1;
             ItemGenerator itemGenerator = generatorList.get(idx);
