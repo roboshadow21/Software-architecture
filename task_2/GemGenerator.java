@@ -3,7 +3,7 @@ package Homework.task_2;
 public class GemGenerator extends ItemGenerator{
 
     /**
-     * Класс создает объект класса GemReward
+     * Класс  наследник ItemGenerator. Создает объект класса GemReward
      * @return - объект класса GemReward
      */
     @Override
