@@ -64,7 +64,7 @@ public abstract class Car {
         public double getEngineCapacity(){
             return engineCapacity;
         }
-//        public void move() {
-//        System.out.println("Car move");
-//        }
+        public void move() {
+        System.out.println("Car move");
+        }
 }
