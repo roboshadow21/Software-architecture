@@ -1,6 +1,10 @@
 package Homework.Task_3;
 
 public class Sedan extends Car implements Refueling, Wiping {
+    Sedan() {
+        this.carBrand = CarBrand.valueOf("BMW");
+        this.engineCapacity = 2000;
+    }
     @Override
     public void fuel() {
         System.out.println("Fuel tank is full");
@@ -37,6 +41,12 @@ public class Sedan extends Car implements Refueling, Wiping {
 
     public void setCityCar(Sedan cityCar) {
         this.cityCar = cityCar;
+    }
+
+    @Override
+    public void setCarBrand(CarBrand brand) {
+        super.setCarBrand(brand);
+        this.carBrand = brand;
     }
 
     @Override
