@@ -20,8 +20,8 @@ public class Customer {
         CashProvider cp = new CashProvider();
         cp.authorization(c);
         if (cp.isAuthorization) {
-            cp.buy(tickets.price);
             tickets = tp.getTickets(1);
+            cp.buy(tickets.price);
         }
 
         return tickets;
