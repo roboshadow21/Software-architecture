@@ -11,6 +11,7 @@ public class TicketProvider {
         Ticket t = new Ticket();
         t.rootNumber = rootNumber;
         t.date = new Date();
+        t.rootNumber += 1;
         return t;
     }
 

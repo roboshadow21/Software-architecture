@@ -15,8 +15,15 @@ public class Customer {
     }
 
     public Ticket searchTicket(Date date, int num) {
+        Customer c = new Customer();
         TicketProvider tp = new TicketProvider();
-        tickets = tp.getTickets(tickets.rootNumber);
+        CashProvider cp = new CashProvider();
+        cp.authorization(c);
+        if (cp.isAuthorization) {
+            cp.buy(tickets.price);
+            tickets = tp.getTickets(1);
+        }
+
         return tickets;
     }
 }

@@ -1,9 +1,14 @@
 package Homework.Task_4;
 
+import java.util.Date;
+
 public class App {
     public static void main(String[] args) {
         Customer c = new Customer();
-//        c.searchTicket(Ticket date, Ticket time);
+        Ticket t = new Ticket();
+        Date date = new Date();
+        c.searchTicket(date, 1);
+        c.buyTicket(t);
 
     }
 }
