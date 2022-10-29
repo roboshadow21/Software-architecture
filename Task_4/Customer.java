@@ -1,7 +1,9 @@
 package Homework.Task_4;
 
 import java.sql.Time;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.Random;
 
 public class Customer {
     int id;
@@ -12,7 +14,9 @@ public class Customer {
         return true;
     }
 
-    public Ticket searchTicket(Date date, Time time, int num) {
+    public Ticket searchTicket(Date date, int num) {
+        TicketProvider tp = new TicketProvider();
+        tickets = tp.getTickets(tickets.rootNumber);
         return tickets;
     }
 }
