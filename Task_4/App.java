@@ -8,6 +8,7 @@ public class App {
         Ticket t = new Ticket();
         Date date = new Date();
         c.searchTicket(date, 1);
+        c.validateCard(999999999, c);
         c.buyTicket(t);
 
     }

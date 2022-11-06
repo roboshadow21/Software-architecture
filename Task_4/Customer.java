@@ -1,9 +1,10 @@
 package Homework.Task_4;
 
-import java.sql.Time;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
-import java.util.Random;
+
+/**
+ * Класс содержит методы поиска билетов и валидации данных пользователя
+ */
 
 public class Customer {
     int id;
@@ -14,16 +15,35 @@ public class Customer {
         return true;
     }
 
+    /**
+    Метод поиска билетов
+     */
     public Ticket searchTicket(Date date, int num) {
-        Customer c = new Customer();
         TicketProvider tp = new TicketProvider();
+        Ticket t;
+        t = tp.getTickets(num);
+        if (t.isValid) {
+            t.date = date;
+        }
+        else {
+            System.out.println("Not available");
+        }
+        return t;
+    }
+
+    /**
+    Метод проверки данных пользователя и банковской карты
+     */
+    public void validateCard(long card, Customer id) {
         CashProvider cp = new CashProvider();
-        cp.authorization(c);
+        cp.card = card;
         if (cp.isAuthorization) {
-            tickets = tp.getTickets(1);
-            cp.buy(tickets.price);
+            cp.authorization(id);
+        }
+        else {
+            System.out.println("Transaction denied");
         }
 
-        return tickets;
     }
+
 }

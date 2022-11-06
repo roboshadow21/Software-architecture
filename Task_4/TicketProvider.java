@@ -1,21 +1,30 @@
 package Homework.Task_4;
 
-import java.sql.Time;
-import java.time.format.DateTimeFormatterBuilder;
-import java.util.TimeZone;
-import java.time.Clock;
-import java.util.Date;
-
+/**
+ * Класс оператора, предоставляющего билеты
+ */
 public class TicketProvider {
+
+    /**
+    Проверка доступности билетов
+     */
     public Ticket getTickets(int rootNumber) {
         Ticket t = new Ticket();
         t.rootNumber = rootNumber;
-        t.date = new Date();
-        t.rootNumber += 1;
         return t;
     }
 
     public boolean updateTicketStatus(Ticket t) {
+        return true;
+    }
+
+    /**
+    Проверка достаточности денежных средств для оплаты
+     */
+    public boolean checkCash(Ticket t) {
+        CashProvider cp = new CashProvider();
+        Customer c = new Customer();
+        cp.buy(t.price);
         return true;
     }
 }
